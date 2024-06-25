@@ -13,7 +13,8 @@ def print_all():
 def add():
     name = input("Enter the name of country: ")
     name = name.lower()
-    if name in country:
+    
+    if name in (country):
         print("Country already in list.Bye!!")
         return
     popn = input("Enter the population: ")
@@ -25,7 +26,7 @@ def add():
 def deet():
     name = input("Enter the name of country you want to delete: ")
     name = name.lower()
-    if name not in country:
+    if name not in enumerate(country):
         print("Country not in list.Bye!!")
         return
 
@@ -52,7 +53,7 @@ def main():
         add()
     elif cmd == "del":
         deet()
-    if cmd == "query":
+    elif cmd == "query":
         query()
     else:
         print("Wrong command!!!!")
